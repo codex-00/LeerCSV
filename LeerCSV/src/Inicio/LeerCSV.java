@@ -15,19 +15,15 @@ public class LeerCSV {
         List<Vial> viales = new ArrayList<>();
 
         try (
-            // Crear un lector de archivos
             BufferedReader br = new BufferedReader(new FileReader(rutaArchivo));
         ) {
-            // Leer la primera línea (encabezado)
             String linea = br.readLine();
 
             // Leer las líneas restantes del archivo
             while ((linea = br.readLine()) != null) {
 
-                // Separar los valores por coma
                 String[] valores = linea.split(",");
 
-                // Crear un nuevo objeto Vial
                 Vial vial = new Vial(
                     Integer.parseInt(valores[0]),
                     valores[1],
@@ -36,7 +32,6 @@ public class LeerCSV {
                     Integer.parseInt(valores[4])
                 );
 
-                // Agregar el objeto Vial a la lista
                 viales.add(vial);
             }
 
