@@ -19,7 +19,6 @@ public class LeerCSV {
         ) {
             String linea = br.readLine();
 
-            // Leer las líneas restantes del archivo
             while ((linea = br.readLine()) != null) {
 
                 String[] valores = linea.split(",");
@@ -39,7 +38,6 @@ public class LeerCSV {
             e.printStackTrace();
         }
 
-        // Mostrar la información de los objetos Vial
         for (Vial vial : viales) {
             System.out.println(vial.toString());
         }
